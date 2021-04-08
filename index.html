@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap css -->
+    <script src="https://unpkg.com/elm-pep"></script>
+    <!-- print -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+
+    <script src="http://cdn.jsdelivr.net/g/filesaver.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Openlayers css -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.3.1/css/ol.css" type="text/css">
+    <!-- Custom css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Openlayers JS  -->
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.3.1/build/ol.js"></script>
+
+    <!-- The line below is only needed for old environments like Internet Explorer and Android 4.x -->
+    <script src="https://cdn.jsdelivr.net/gh/wavded/js-shapefile-to-geojson/stream.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/wavded/js-shapefile-to-geojson/shapefile.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/wavded/js-shapefile-to-geojson/dbf.js"></script>
+
+      <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+
+
+    <title>Crime by City</title>
+
+</head>
+
+
+<body>
+    <div id="title">
+        <h1>Bihar Parliamentary constituency data</h1>
+    </div>
+    <div id="popup" class="ol-popup">
+        <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+        <div id="popup-content"></div>
+    </div>
+    
+    
+
+    <form class="form-inline">
+        <button onclick="setstyle()">Map based on Parliamentary constituency</button>
+        <label for="type">Select Category</label>
+        <select id="type" class="form-control">
+            <option value="All"  >All</option>
+            <option value="General">General</option>
+            <option value="SC">SC</option>
+            <option value="ST">ST</option>
+        </select>
+    </form>
+    <!-- Map -->
+    
+    <div class="map" id="mymap"></div>
+
+
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
