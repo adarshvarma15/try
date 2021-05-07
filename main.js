@@ -9,7 +9,7 @@ var highlightStyle = new ol.style.Style({
     width: 7,
   }),
   fill: new ol.style.Fill({
-    color: 'yellow',
+    color: 'green',
   }),
 })
 
