@@ -33,7 +33,7 @@ var stylefunction =function (feature) {
          width: 3,
        }),
        fill: new ol.style.Fill({
-         color: 'yellow',
+         color: 'pink',
        }),
      })
   return retStyle;
